@@ -20,6 +20,7 @@ import { useEditorStore } from "@/store/use-editor-store"
 import TextAlign from "@tiptap/extension-text-align"
 import { FontSizeExtension } from "@/extensions/font-size"
 import { LineHeightExtension } from "@/extensions/line-height"
+import { Ruler } from "./ruler"
 
 //Things which are not there in the starter kit needs to be installed. Check the docs to know which all are installed in the starter kit
 
@@ -29,6 +30,7 @@ export const Editor = () => {
     const { setEditor } = useEditorStore();
 
     const editor = useEditor({
+        immediatelyRender:false, // to resolve the SSR error
         // once the editor is created, we have access to the editor throught the app. We are doing this to implement the undo-redo functions
         onCreate({ editor }) {
             setEditor(editor);
@@ -154,26 +156,11 @@ export const Editor = () => {
                 },
 
             }),
-        ],
-        content: `
-        <h1>The name is Bond!! James Bond!! </h1>
-        <table>
-          <tbody>
-            <tr>
-              <th>Name</th>
-              <th colspan="3">Description</th>
-            </tr>
-            <tr>
-              <td>Cyndi Lauper</td>
-              <td>Singer</td>
-              <td>Songwriter</td>
-              <td>Actress</td>
-            </tr>
-          </tbody>
-        </table>`
+        ]
     })
     return (
-        <div className=" size-full overflow-x-auto bg-[#F9FBFD] px-4 print:p-0 print:bg-white print:overflow-visible">
+        <div className=" size-full overflow-x-auto bg-[#F9FBFD] px-4 print:p-0 print:bg-white print:overflow-visible pt-1">
+            <Ruler/>
             <div className="min-w-max flex justify-center w-[816px] py-4 print:py-0 mx-auto print:w-full print:min-w-0">
                 <EditorContent editor={editor} />
             </div>
