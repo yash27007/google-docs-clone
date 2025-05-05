@@ -6,9 +6,11 @@ import { TemplatesGallery } from "./templatesGallery"
 import { usePaginatedQuery } from "convex/react"
 import {api} from "../../../convex/_generated/api"
 import { DocumentsTable } from "./documentsTable"
+import { useSearchParam } from "@/hooks/use-search-params"
 
 export default function Home(){
-  const {results, status, loadMore} = usePaginatedQuery(api.documents.get, {},{initialNumItems:5});
+  const [search] = useSearchParam()
+  const {results, status, loadMore} = usePaginatedQuery(api.documents.get, {search},{initialNumItems:5});
 
   return (
     <div className="min-h-screen flex flex-col">
