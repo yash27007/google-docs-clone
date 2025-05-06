@@ -25,6 +25,9 @@ export default function Home(){
         status={status}
         />
       </div>
-    </div>
+    <footer className="flex w-full items-center justify-center mb-2">
+      <p className="text-sm text-muted-foreground">Designed and Developed by <a className="hover:underline" href="https://github.com/yash27007" target="_blank">Yashwanth Aravind</a></p>
+    </footer>
+    </div> 
   )
 }

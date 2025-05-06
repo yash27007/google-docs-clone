@@ -9,13 +9,13 @@ import {
     DialogTrigger,
   } from "@/components/ui/dialog"
   
+import {toast} from "sonner"
 import { Id } from "../../convex/_generated/dataModel"
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useState } from "react";
-import { title } from "process";
 
 interface RenameDialogProps {
     documentId : Id<"documents">
@@ -33,6 +33,8 @@ export const RenameDialog = ({documentId, children, initialTitle}:RenameDialogPr
         e.preventDefault();
         setIsUpdating(true);
         update({id:documentId, title: title.trim() || "Untitled"})
+        .then(()=>toast.success("Document updated"))
+        .catch(()=>toast.error("Something went wrong"))
         .finally(()=>{
             setIsUpdating(false);
             setIsOpen(false);
