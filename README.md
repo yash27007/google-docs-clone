@@ -1,12 +1,12 @@
-# 📝 Pages – Google Docs Clone
+#  Pages – Google Docs Clone
 
 **Pages** is a real-time collaborative text editor inspired by Google Docs. Built using cutting-edge technologies like **Next.js**, **Tiptap**, **Liveblocks**, **Convex DB**, and **Clerk**, this app enables seamless live editing, user authentication, and reactive document updates.
 
-## 🚀 Live Demo
+##  Live Demo
 
 🔗 [Check out the live app](https://google-docs-clone-gamma-two.vercel.app/)
 
-## 📦 Tech Stack
+##  Tech Stack
 
 - **Next.js** – React framework for server-side rendering
 - **Tiptap** – Headless rich-text editor
@@ -15,7 +15,7 @@
 - **Clerk** – Authentication and user management
 - **Bun** – Ultra-fast JavaScript runtime and package manager
 
-## 📁 Getting Started
+##  Getting Started
 
 ### 1. Clone the Repository
 
@@ -62,19 +62,19 @@ bun run dev
 
 Navigate to [http://localhost:3000](http://localhost:3000) and log in to start editing.
 
-## ✨ Features
+##  Features
 
-* 📄 Create and edit rich text documents
-* 🔒 Clerk-powered authentication
-* 🤝 Real-time collaborative editing (Liveblocks)
-* 🧠 Reactive backend with Convex DB
-* ⚡ Fast and modern Bun runtime
+*  Create and edit rich text documents
+*  Clerk-powered authentication
+*  Real-time collaborative editing (Liveblocks)
+*  Reactive backend with Convex DB
+*  Fast and modern Bun runtime
 
-## 🧪 Environment Setup
+##  Environment Setup
 
 Make sure your `.env.local` file includes all required variables (refer to `.env.example`). If something breaks, check if Convex and Clerk are correctly configured.
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions! To get started:
 
@@ -92,7 +92,7 @@ We welcome contributions! To get started:
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source and available under the [AGPL](LICENSE).
 
 
 Built with ❤️ by [Yash](https://github.com/yash27007)
